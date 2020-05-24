@@ -753,6 +753,9 @@ footer h2 {
 	font-weight: 400;
 }
 
+.reservation + .footer-outer {
+	padding-top: 0;
+}
 .footer-outer {
 	width: 100%;
 	max-width: 1440px;
