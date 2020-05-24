@@ -253,6 +253,8 @@ nav a:hover {
 	width: 100%;
 	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.22);
 	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	align-items: stretch;
 }
 .menu-bar ul {
 	margin-top: 10px;
@@ -261,6 +263,7 @@ nav a:hover {
 	list-style: none;
 	text-align: center;
 	justify-content: space-evenly;
+	min-width: 814px;
 }
 .menu-bar li {
 	min-width: 160px;
