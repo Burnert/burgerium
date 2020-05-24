@@ -1114,6 +1114,16 @@ footer h2 {
 }
 
 @media screen and (max-width: 414px) {
+	header {
+		margin-bottom: 0;
+	}
+	header + section {
+		height: 40%;
+	}
+	.main-front {
+		min-height: 900px;
+	}
+
 	.logo img {
 		height: 80px;	
 	}
