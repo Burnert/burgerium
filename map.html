@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Burgerium - Mapa</title>
+	<meta name="description" content="Opis Burgerium">
+	<link rel="icon" href="img/favicon.svg" sizes="64x64">
+	<link rel="stylesheet" href="css/style.css">
+	<script>
+		document.addEventListener('DOMContentLoaded', e => {
+			function mapHeight() {
+				const headerHeight = document.querySelector('.yellow-bg').offsetHeight;
+				return (Math.max(window.innerHeight - headerHeight, 600)) + 'px';
+			}
+			const map = document.getElementById('map');
+			function resizeMap() {
+				map.style.height = mapHeight();
+			}
+			resizeMap();
+			window.addEventListener('resize', e => {
+				resizeMap();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="yellow-bg">
+		<header>
+			<div>
+				<div class="logo">
+					<a href="index.html">
+						<img src="img/logo.png" alt="Logo">
+						<h1>Burgerium</h1>
+					</a>
+				</div>
+				<div class="open-hours-small">
+					<table>
+						<tr>
+							<td>Poniedziałek-Piątek:</td>
+							<td>8:00-23:00</td>
+						</tr>
+						<tr>
+							<td>Sobota-Niedziela:</td>
+							<td>9:00-22:30</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div>
+				<div class="delivery">
+					<img src="img/delivery.png" alt="Grafika dostawy">
+					<span>Błyskawiczna dostawa</span>
+					<span>+48 606 607 891</span>
+				</div>
+				<nav>
+					<ul class="bebas">
+						<li><a href="index.html">Strona główna</a></li>
+						<li><a href="menu.html">Menu</a></li>
+						<li><a href="map.html">Mapa</a></li>
+						<li><a href="gallery.html">Galeria</a></li>
+						<li><a href="contact.html">Kontakt</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+	</div>
+	<div>
+		<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3025.234937860964!2d20.021370400030605!3d49.45873371133058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2spl!4v1586890774864!5m2!1sen!2spl" width="1280" height="720" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+	</div>
+</body>
+</html>
