@@ -1014,7 +1014,8 @@ footer h2 {
 
 @media screen and (max-width: 568px) {
 	header + section {
-		height: 50%;
+		height: fit-content;
+		margin-top: 10px;
 	}
 	nav {
 		justify-content: center;
@@ -1114,12 +1115,6 @@ footer h2 {
 }
 
 @media screen and (max-width: 414px) {
-	header {
-		margin-bottom: 0;
-	}
-	header + section {
-		height: 40%;
-	}
 	.main-front {
 		min-height: 900px;
 	}
