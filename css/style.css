@@ -606,19 +606,22 @@ form {
 	margin: 50px 0 0;
 	z-index: 2;
 }
-form input, form button {
+form input, form textarea, form button {
 	display: block;
 	width: 100% !important;
 	height: 60px;
 	border-radius: 5px;
 	font-size: 20px;
 }
-form input {
+form input, form textarea {
 	border: 1px solid rgba(0, 0, 0, 0.2);
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 500;
 	padding: 0 20px;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+form input {
+	line-height: 60px;
 }
 form input[type='date']::-webkit-inner-spin-button,
 form input[type='time']::-webkit-inner-spin-button,
@@ -636,6 +639,17 @@ form > div {
 form > div > div {
 	width: 50%;
 	padding: 12px;
+}
+form > div > div.double {
+	width: 100%;
+}
+form textarea {
+	width: 100%;
+	min-width: 100%;
+	max-width: 100%;
+	height: 200px;
+	min-height: 200px;
+	padding: 16px 20px;
 }
 .reservation > div:first-child {
 	position: relative;
@@ -669,6 +683,76 @@ form > div > div {
 	height: 400px;
 }
 
+.contact, .gallery {
+	flex-direction: column;
+}
+.contact h2, .gallery h2 {
+	margin: 30px 30px;
+	font-size: 60px;
+	text-align: center;
+}
+.gallery > div,
+.contact > div {
+	width: 75%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 25px;
+	background-color: white;
+	box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.2);
+	margin-bottom: 40px;
+}
+.gallery > div > div {
+	width: 80%;
+	margin: 25px auto;
+}
+.gallery > div > div a,
+.gallery > div > div img {
+	display: block;
+	width: 100%;
+	box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.05);
+}
+.contact {
+	font-size: 20px;
+	text-align: center;
+}
+.contact form > div:last-child {
+	width: 50%;
+	margin: auto;
+}
+.contact input {
+	height: 50px;
+}
+.contact .red-bt {
+	height: 50px;
+	padding: 13px 20px;
+	margin: 15px 0;
+}
+.contact form {
+	margin: 0;
+}
+.contact hr {
+	width: 98%;
+	margin: 30px 0;
+}
+.contact h3 {
+	font-size: 36px;
+	font-weight: 400;
+	text-align: center;
+	margin: 0 30px;
+}
+.contact > div > div:last-child {
+	display: flex;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 30px;
+	margin: 50px 0 25px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.contact > div > div:last-child > div {
+	margin: 0 16px;
+}
 
 footer {
 	color: rgba(255, 255, 255, 0.8);
@@ -819,6 +903,9 @@ footer h2 {
 	font-family: 'Alfa Slab One', 'Arial Black', sans-serif;
 	text-transform: uppercase;
 }
+h2.alfa { 
+	font-weight: 400;
+}
 
 
 /* General */
@@ -912,6 +999,10 @@ footer h2 {
 		margin: auto;
 	}
 
+	.contact > div {
+		width: 90%;
+	}
+
 	nav ul {
 		letter-spacing: 3px;
 	}
@@ -957,6 +1048,13 @@ footer h2 {
 
 	section.try {
 		flex-direction: column;
+	}
+
+	.gallery > div {
+		width: 85%;
+	}
+	.gallery > div > div {
+		width: 90%;
 	}
 
 	.footer-outer {
@@ -1006,6 +1104,10 @@ footer h2 {
 	}
 	form > div > div {
 		width: 100%;
+	}
+	.contact form > div:last-child {
+		width: 100%;
+		padding: 0 12px;
 	}
 	.reservation picture.bg-bottle {
 		display: none;
@@ -1083,6 +1185,18 @@ footer h2 {
 
 	.explore > div {
 		margin: 20px 20px;
+	}
+
+	.gallery > div {
+		width: 100%;
+	}
+
+	.contact > div {
+		width: 100%;
+		padding: 25px 0;
+	}
+	.contact h2 {
+		font-size: 46px;
 	}
 
 	footer .logo img {
@@ -1172,6 +1286,20 @@ footer h2 {
 	}
 	.reservation > div:first-child {
 		display: none;
+	}
+
+	.gallery > div {
+		padding: 10px;
+	}
+	.gallery > div > div {
+		width: 100%;
+	}
+	.contact h2 {
+		font-size: 36px;
+		letter-spacing: 0;
+	}
+	.contact h3 {
+		font-size: 32px;
 	}
 	
 	footer > div.extension > div:first-child > div:last-of-type,
